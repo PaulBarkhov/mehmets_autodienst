@@ -1,0 +1,40 @@
+div,p,td,th,body {
+  font-size: 9pt;
+  color: #000000;
+  font-family: Helvetica, Tahoma, Verdana, Arial;
+  text-decoration: none;
+}
+
+a:link {
+ font-size: 9pt;
+ color: #000000;
+ font-family: Helvetica, Tahoma, Verdana, Arial;
+ text-decoration: underline;
+}
+
+a:visited {
+ font-size: 9pt;
+ color: #000000;
+ font-family: Helvetica, Tahoma, Verdana, Arial;
+ text-decoration: underline;
+}
+
+a:hover {
+ font-size: 9pt;
+ color: #000000;
+ font-family: Helvetica, Tahoma, Verdana, Arial;
+ text-decoration: underline overline;
+}
+
+
+/* Hintergrund Farbe */
+body {
+  background-color: #FFFFFF;
+}
+
+
+#img {
+  border-width:1px;
+  border-color:#3C475D;
+  border-style:solid;
+}
