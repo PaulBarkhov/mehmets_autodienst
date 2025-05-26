@@ -6,7 +6,7 @@ class initRollingNumbers {
         this.currNum = 0
 
         if (this.stat.id === 'years') {
-            this.targetNum = new Date().getFullYear() - 1994
+            this.targetNum = 1978
         }
         else {
             this.targetNum = Math.round(Date.now() / 200000000)

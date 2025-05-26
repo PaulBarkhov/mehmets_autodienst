@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- https://www.diewerkstatt-hameln.de/html/werkstatt.html -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link href="/src/reset.css" rel="stylesheet">
+
+    <title>Mehmets Galerie</title>
+
+    <style>
+        
+        body {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            width: 100svw;
+            overflow-x: hidden;
+            overflow-y: auto;
+
+            button {
+                border: none;
+                padding: 0;
+                margin: 0;
+                width: calc(100svw / 3);
+                cursor: pointer;
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-fit: contain;
+            }
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+
+            document.querySelectorAll('.imageButton').forEach(button => button.addEventListener('click', event => {
+                if (event.target.style.position === 'fixed') closeImage(event)
+                else openImage(event)
+            }))
+
+            function openImage(event) {
+
+                const target = event.target
+
+                const ts = target.style
+
+                const { width, height } = window.getComputedStyle(target)
+                const { left, top } = target.getBoundingClientRect()
+
+                this.imageProps = { left, top, width, height }
+
+                ts.maxWidth = width
+                ts.maxHeight = height
+                ts.width = '100dvw'
+                ts.position = 'fixed'
+                ts.left = left + 'px'
+                ts.top = top + 'px'
+                ts.zIndex = 100
+                ts.transition = 'all .7s'
+
+                setTimeout(() => {
+                    ts.left = '50dvw'
+                    ts.top = 'calc(50dvh)'
+                    ts.transform = 'translate(-50%, -50%)'
+                    ts.maxWidth = '100dvw'
+                    ts.maxHeight = '100dvh'
+                    ts.backgroundColor = 'black'
+                }, 1);
+            }
+            function closeImage(event) {
+                const ts = event.target.style
+                ts.transition = 'none'
+
+                if (ts.position === 'fixed') {
+                    const { left, top, width, height } = this.imageProps
+                    ts.zIndex = 1
+                    ts.transition = 'all .7s'
+                    ts.left = left + 'px'
+                    ts.top = top + 'px'
+                    ts.maxWidth = width
+                    ts.maxHeight = height
+                    ts.transform = 'translate(0%,0%)'
+
+                    setTimeout(() => {
+                        ts.position = 'unset'
+                    }, 700);
+                    return
+                }
+            }
+        })
+
+    </script>
+
+</head>
+
+<body>
+
+    <!-- <img src="output_webp/20250402_164733.webp" alt=""> -->
+    <button class="imageButton"><img src="output_webp/20250402_165415.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165431.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165446.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165641.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165856.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165924.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_165940.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_170010.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_171136.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_164420.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_164524.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135143.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135148.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135308.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135318.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135439.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135509.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20190722_135530.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_163248.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_163345.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_164606.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_163259.webp" alt=""></button>
+    <button class="imageButton"><img src="output_webp/20250402_163332.webp" alt=""></button>
+
+</body>
+
+</html>

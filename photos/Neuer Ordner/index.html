@@ -1,0 +1,476 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- https://www.diewerkstatt-hameln.de/html/werkstatt.html -->
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow">
+
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
+
+    <link href="/src/styles.css" rel="stylesheet">
+
+
+    <title>Mehmets Autodienst</title>
+    <!-- <script src="https://static.elfsight.com/platform/platform.js" async></script> -->
+
+  <script type="module" crossorigin src="/assets/index-CZfnImVO.js"></script>
+  <link rel="stylesheet" crossorigin href="/assets/index-BUWwii5N.css">
+</head>
+
+<body class="flex flex-col">
+
+    <header class="fixed top-0 w-full flex flex-row justify-between items-center z-5">
+        <div class="w-full">
+            <!-- <p class="sectionName text-white text-center text-2xl landscape:text-3xl"></p> -->
+        </div>
+        <button class="z-3 pr-5 text-white" id="menuButton">☰</button>
+    </header>
+
+    <dialog class="w-full h-full" id="menu">
+        <button class="fixed top-2 right-4 z-3 text-black cursor-pointer" id="closeMenuButton">
+            <img class="h-[8svh] landscape:h-[4svw]" src="close.svg" alt="schließen">
+        </button>
+
+        <nav class="h-full flex flex-col justify-evenly items-center text-black">
+            <button class="nav-button">Team</button>
+            <button class="nav-button">Dienstleistungen</button>
+            <button class="nav-button" id="galeryButton">Galerie</button>
+            <button class="nav-button">Kontakt</button>
+            <button >Impressum</button>
+        </nav>
+    </dialog>
+
+    <!-- <div class="section-label landscape:hidden z-2 text-2xl landscape:text-3xl">UNSER TEAM</div> -->
+
+
+    <section class="h-[100svh] w-full flex flex-col items-center text-center relative lg-section z-4" data-color="dark">
+
+        <img class="landscape:hidden absolute h-full w-full object-cover z-[-1]" src="house-vertical-test.jpg" alt="">
+
+        <img class="hidden landscape:block absolute h-full w-full object-cover z-[-1]" src="houseTest.jpg" alt="">
+
+        <div class="asd px-[4svh] py-[3svh] landscape:py-[3svw] landscape:px-[5svw] bottom-[13%] landscape:bottom-[10%]">
+            <h1 class="text-[3svh] landscape:text-[3svw]">MEHMET'S AUTODIENST</h1>
+            <h2 class="text-[3svh] landscape:text-[2svw]">Ihr Autowerkstatt in Hameln</h2>
+        </div>
+
+        <!-- <nav class="w-full py-4 z-2 text-white md:text-2xl flex flex-row justify-evenly">
+            <button>Leistungen</button>
+            <button>Team</button>
+            <button>Kontakt</button>
+        </nav> -->
+<!-- 
+        <img class="person-png w-[70%] md:w-[auto] h-[auto] md:h-[70vh] " id="person1" src="person1.png" alt="">
+        <img class="person-png w-[70%] md:w-[auto] h-[auto] md:h-[70vh] " id="person2" src="person2.png" alt=""> -->
+
+        <!-- <h1 class="text-3xl text-black z-2 py-12 absolute bottom-2" id="h1-logo">
+            MEHMET'S AUTODIENST
+        </h1> -->
+
+        <div class="scrollHint absolute bottom-[3%]"><span></span><span></span></div>
+
+    </section>
+
+    <!-- <section class="w-full h-[100svh] lg-section flex flex-col justify-evenly items-center relative" data-name="Über uns" data-color="light">
+
+        <div class="w-full h-full flex flex-col justify-evenly items-center landscape:flex-row">
+
+            <div class="rollingNumbers-wrapper flex flex-col gap-2">
+                <h3 class="text-center ">Seit</h3>
+                <h3 class="text-5xl">
+                  <span class="rollingNumbers" id="years"></span>
+                </h3>
+                <h3 class="text-center ">Dabai</h3>
+            </div>
+
+        </div>
+        
+
+
+        
+        <div class="elfsight-app-34cf600d-58ff-4f41-86e3-11ea37c2f8b3 w-full" data-elfsight-app-lazy></div>
+
+        <div class="scrollHint dark absolute bottom-[3%]"><span></span><span></span></div>
+    </section> -->
+
+    <section class="landscape:hidden w-full h-[100svh] flex flex-col justify-evenly items-center" data-name="Über uns" data-color="dark">
+        <nav class="h-full flex flex-col justify-evenly items-center text-black">
+            <button class="nav-button">Team</button>
+            <button class="nav-button">Dienstleistungen</button>
+            <button class="nav-button" id="galeryButton">Galerie</button>
+            <button class="nav-button">Kontakt</button>
+            <button >Impressum</button>
+        </nav>
+    </section>
+
+    <section data-section="Team" data-skip="down" class="w-full h-[100svh] relative lg-section">
+        <div class="section-label z-2 text-2xl landscape:text-3xl">UNSER TEAM</div>
+    </section>
+
+    <div data-section="Team" class="cardsWrapper animated w-full md:h-[100svh] landscape:h-[100svh] flex flex-col justify-evenly items-center md:flex-row md:gap-4 landscape:flex-row landscape:gap-6 landscape:px-10 lg-section relative" data-name="Unser Team" data-color="light">
+
+        <div class="landscapeSectionHeader">
+            <p class="text-[2rem] font-medium">UNSER TEAM</p>
+            <p class="text-[1.25rem]">Mit Leidenschaft für Autos – Ihr Fahrzeug in besten Händen</p>
+        </div>
+
+        <section class="card h-[100svh] w-full landscape:h-[60vh] relative flex flex-col justify-end landscape:justify-end landscape:max-w-[40svh]" data-name="Unser Team" data-color="dark">
+            
+            
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="workshop2.jpg" alt="">
+            <img class="object-contain" src="mehmet.webp" alt="">
+            <div class="section-textWrapper flex flex-row justify-center z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight ">MEHMET </span>
+            </div>
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+        </section>
+
+        <section class="card h-[100svh] w-full landscape:h-[60vh] relative flex flex-col justify-end landscape:justify-end  landscape:max-w-[40svh]" data-name="Unser Team" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="workshop1.jpg" alt="">
+            <img class="object-contain" src="brigit.webp" alt="">
+            <div class="section-textWrapper flex flex-row justify-center z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight ">BIRGIT </span>
+            </div>
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+        </section>
+
+        <section class="card h-[100svh] w-full landscape:h-[60vh] relative flex flex-col justify-end landscape:justify-end  landscape:max-w-[40svh]" data-name="Unser Team" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="workshop3.jpg" alt="">
+            <img class="object-contain" src="kevin.webp" alt="">
+            <div class="section-textWrapper flex flex-row justify-center z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight ">KEVIN </span>
+            </div>
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+        </section>
+
+        <div class="hidden landscape:block scrollHint dark absolute bottom-[3%]"><span></span><span></span></div>
+
+    </div>
+
+    <section data-section="Dienstleistungen" data-skip="down" class="w-full h-[100svh] relative lg-section">
+        <div class="section-label z-2 text-2xl landscape:text-3xl">Dienstleistungen</div>
+    </section>
+
+    <div data-section="Dienstleistungen" class="cardsWrapper animated w-full landscape:h-[100svh] flex flex-col items-center md:flex-row landscape:flex-row landscape:gap-5 landscape:px-5 lg-section relative overflow-hidden" data-name="Unsere Dienstleistungen" data-color="light">
+
+        <div class="landscapeSectionHeader">
+            <p class="text-[2rem] font-medium">DIENSTLEISTUNGEN</p>
+            <p class="text-[1.25rem]">Alles für Ihre Mobilität – Wir bieten maßgeschneiderte Lösungen</p>
+        </div>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="wheel.jpg" alt="">
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">REIFENSERVICE</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Ihre Reifen sind der direkte Kontakt zur Straße und spielen eine entscheidende Rolle für Ihre Sicherheit. Unser Reifendienst umfasst Montage, Auswuchten und eine gründliche Verschleißprüfung, um optimalen Grip und Fahrstabilität zu gewährleisten. So sind Sie jederzeit sicher unterwegs.            
+                </p>
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="crack.jpg" alt="">
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">SCHEIBENREPARATUR</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Klare Sicht ist essenziell für Ihre Sicherheit im Straßenverkehr. Unser Scheibenreparatur-Service behebt Steinschläge und kleinere Schäden schnell und zuverlässig, oft ohne Austausch der Scheibe. So vermeiden Sie größere Reparaturen und fahren weiterhin sicher.            
+                </p>
+            
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+
+        </section>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="engine.jpg" alt="">
+            
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">MOTORDIAGNOSE</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Ein reibungslos funktionierender Motor ist essenziell für die Leistung und Langlebigkeit Ihres Fahrzeugs. Unsere Motordiagnose erkennt frühzeitig Fehler und optimiert die Motorleistung. So vermeiden Sie teure Folgeschäden und fahren zuverlässig weiter.            
+                </p>
+                
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="hidden landscape:block scrollHint dark absolute bottom-[3%]"><span></span><span></span></div>
+    </div>
+
+
+    <div class="cardsWrapper w-full md:h-[100svh] landscape:h-[100svh] flex flex-col items-center md:flex-row landscape:flex-row landscape:px-5 landscape:gap-5 lg-section relative" data-name="Unsere Dienstleistungen" data-color="light">
+        
+        <div class="landscapeSectionHeader">
+            <p class="text-[2rem] font-medium">DIENSTLEISTUNGEN</p>
+            <p class="text-[1.25rem]">Qualität und Präzision – Wir machen Ihr Auto fit</p>
+        </div>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="inspection2.jpg" alt="">
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+            
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">INSPEKTION</span>
+            </div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Bei uns ist täglich der TÜV im Haus!
+                    Die Hauptuntersuchung wird Gemäß §29STVZO durch die Dekra oder KÜS durchgeführt.     
+                </p>
+                
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+                
+                <a class="flex flex-row gap-3 items-center" href="https://www.dekra.de/de/checkliste-hauptuntersuchung/" target="_blank">
+                    <img class="h-8" src="question.svg" alt="">
+                    <p>FAQ zur HU</p>
+                </a>
+                
+                <a class="flex flex-row gap-3 items-center">
+                    <img class="h-8" src="checklist.svg" alt="https://www.dekra.de/de/faq-hauptuntersuchung/" target="_blank">
+                    <p>HU-Checkliste</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="unfallinstandsetzung.jpg" alt="">
+            
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">INSTANDSETZUNG</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Wenn Ihr Fahrzeug nach einem Unfall oder Schaden wieder fahrbereit gemacht werden muss, sind wir für Sie da. Unser Service umfasst Reparaturen, Diagnosen und Checks – stets mit Fokus auf Sicherheit und Zuverlässigkeit. Dabei verwenden wir ausschließlich originale Hersteller-Ersatzteile.
+                </p>
+                
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="brake.jpg" alt="">
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">BREMSENSERVICE</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Ihre Bremsen sind entscheidend für Ihre Sicherheit. Lassen Sie sie regelmäßig überprüfen, um teure Folgereparaturen zu vermeiden. Wir warten Ihre Bremsanlage zuverlässig, damit Sie sicher unterwegs sind.            
+                </p>
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <div class="hidden landscape:block scrollHint dark absolute bottom-[3%]"><span></span><span></span></div>
+        
+    </div>
+
+    <div class="cardsWrapper w-full md:h-[100svh] landscape:h-[100svh] flex flex-col items-center md:flex-row landscape:flex-row landscape:px-5 landscape:gap-5 lg-section relative" data-name="Unsere Dienstleistungen" data-color="light">
+        
+        <div class="landscapeSectionHeader">
+            <p class="text-[2rem] font-medium">DIENSTLEISTUNGEN</p>
+            <p class="text-[1.25rem]">Exzellenz in jedem Service – Ihr Auto verdient das Beste</p>
+        </div>
+
+        <section class="card service w-full relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="klima.jpg" alt="">
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">KLIMASERVICE</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Klimaanlagen sind ein fester Bestandteil moderner Fahrzeuge und erfordern regelmäßige Wartung. Unser Klimaservice umfasst eine umfassende Funktions- und Leistungsprüfung, um optimale Leistung sicherzustellen.            
+                </p>
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="windshield.jpg" alt="">
+            
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">AUTOGLASS</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Auto-Glasreparaturen sind wichtig, um die Sicherheit und Sichtbarkeit zu gewährleisten. Unser Auto-Glas-Service umfasst die Reparatur von Rissen und Steinschlägen sowie den Austausch beschädigter Scheiben, damit Sie sicher und mit klarer Sicht unterwegs sind.            
+                </p>
+                
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section>
+
+        <!-- <section class="card service relative flex flex-col" data-name="Dienstleistungen" data-color="dark">
+            <img class="h-full w-full object-cover absolute animated z-[-1]" src="windshield.jpg" alt="">
+            
+            <div class="section-textWrapper flex flex-row justify-center animated z-1 landscape:absolute bottom-0">
+                <span class="fit-to-width animated animation-slideFromRight">AUTOGLASS</span>
+            </div>
+
+            <div class="scrollHint absolute bottom-[10%] landscape:hidden"><span></span><span></span></div>
+
+            <div class="service-description left-[3svh] landscape:left-[2svw] right-[3svh] landscape:right-[2svh]">
+                <p>
+                    Auto-Glasreparaturen sind wichtig, um die Sicherheit und Sichtbarkeit zu gewährleisten. Unser Auto-Glas-Service umfasst die Reparatur von Rissen und Steinschlägen sowie den Austausch beschädigter Scheiben, damit Sie sicher und mit klarer Sicht unterwegs sind.            
+                </p>
+                
+                <a class="flex flex-row gap-3 items-center" href="tel:05151959386">
+                    <img class="h-[6svh] landscape:h-[3svw]" src="phone-white.svg">
+                    <p>Jetzt Termin vereinbaren</p>
+                </a>
+            </div>
+        </section> -->
+    </div>
+
+    <div data-section="Kontakt" class="flex flex-col md:flex-row landscape:flex-row lg-section">
+<!-- 
+        <section class="h-[100svh] w-full flex flex-col" id="section-dekra">
+            <img class="w-full" src="dekra.png" alt="">
+    
+            <div class="self-end flex flex-col h-full py-6 text-center items-center font-bold animated animation-slideFromRight" id="green-area">
+                <p class="font-l">Anerkannter Prüfstützpunk</p>
+                <div class="flex flex-col justify-evenly h-full">
+                    <div class="flex flex-row gap-3 items-center">
+                        <img class="h-8" src="checkmark.svg" alt="">
+                        <p>Jeden Tag</p>
+                    </div>
+    
+                    <div class="flex flex-row gap-3 items-center">
+                        <img class="h-8" src="checkmark.svg" alt="">
+                        <p>Ohne Termin</p>
+                    </div>
+    
+                    <a class="flex flex-row gap-3 items-center" href="https://www.dekra.de/de/checkliste-hauptuntersuchung/"
+                        target="_blank">
+                        <img class="h-8" src="question.svg" alt="">
+                        <p>FAQ zur HU</p>
+                    </a>
+    
+    
+                    <a class="flex flex-row gap-3 items-center">
+                        <img class="h-8" src="checklist.svg" alt="https://www.dekra.de/de/faq-hauptuntersuchung/"
+                            target="_blank">
+                        <p>HU-Checkliste</p>
+                    </a>
+    
+                </div>
+            </div>
+        </section> -->
+
+        <!-- <section class="h-[100svh] w-full flex flex-col items-center justify-center text-center">
+            <p>Wir sprechen:</p>
+            <p>Deutsch</p>
+            <p>Türkisch</p>
+            <p>Russisch</p>
+            <p>Ukrainisch</p>
+        </section> -->
+
+
+
+        <section data-section="Kontakt" class="h-[100svh] w-full flex flex-col landscape:flex-row items-center">
+
+            <div class="hidden landscape:block w-[65svw] h-full pr-[15svw]">
+                <img class="w-full h-full" src="output_webp/20250402_163259.webp" alt="">
+            </div>
+
+            <div class="flex flex-col justify-evenly items-start h-full text-xs landscape:text-base">
+
+                <div class="w-full flex flex-row gap-5 items-center">
+                    <img class="h-10" src="calendar.svg" alt="">
+                    <p class="w-full font-medium text-center">Mo - Do: <br />07:30 Uhr - 17:00 Uhr</p>
+                </div>
+                
+                <div class="w-full flex flex-row gap-5 items-center">
+                    <img class="h-10" src="fritag.svg" alt="">
+                    <p class="w-full font-medium text-center">Freitag: <br />07:30 Uhr - 15:00 Uhr</p>
+                </div>
+
+                <a class="w-full flex flex-row gap-5 items-center" href="https://maps.app.goo.gl/yBF2VkYPeFPZKD4z8">
+                    <img class="h-10" src="location.svg" alt="">
+                    <p class="w-full text-center">31789 Hameln<br />Auf dem Rübencampe 4</p>
+                </a>
+                <a class="w-full flex flex-row gap-5 items-center" href="tel:05151959386">
+                    <img class="h-10" src="phone.svg" alt="">
+                    <p class="w-full text-center">05151 - 959386<br />Gerne telefonisch für Sie da</p>
+                </a>
+                <a class="w-full flex flex-row gap-5 items-center" href="mailto:info@mehmets-autodienst.de">
+                    <img class="h-10" src="email.svg" alt="">
+                    <p class="w-full text-center">E-Mail-Adresse<br />info@mehmets-autodienst.de</p>
+                </a>
+
+            </div>
+    
+        </section>
+    
+    </div>
+
+    <!-- <section class="hidden lg:flex lg-section h-[100svh] w-full  flex-col items-center ">
+        <iframe class="h-full w-full" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4901.702799042878!2d9.416218368116393!3d52.100635973038884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47ba8e25cf8cbfa3%3A0xe0540efb885e809e!2sMehmets%20Autodienst!5e0!3m2!1sru!2sde!4v1741898677392!5m2!1sru!2sde" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section> -->
+
+
+</body>
+
+</html>

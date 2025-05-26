@@ -20,6 +20,7 @@ let menuButton = null
 let scrollHints = []
 
 function scrollToSection(index, shouldScrollInstantly) {
+    console.log('sdfsd')
 
     if (!sections[index]) return
     const skip = sections[index]?.attributes['data-skip']?.value || false
@@ -157,8 +158,12 @@ document.addEventListener('DOMContentLoaded', () => {
     sectionNameElement = header.querySelector('.sectionName')
     menuButton = header.querySelector('#menuButton')
 
-    window.addEventListener('resize', setSections)
-    window.addEventListener("deviceorientation", setSections, true);
+    window.addEventListener('resize', () => {
+        setSections()
+    }, )
+    window.addEventListener("orientationchange", () => {
+        setSections()
+    });
 
     // Prevent default scrolling
     window.addEventListener('wheel', (e) => {
@@ -171,8 +176,6 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault();
         }
     });
-
-
 
     let touchStartY = 0;
     let touchEndY = 0;
@@ -192,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
         // Ignore very slow swipes (likely inertia scrolling)
         let speed = Math.abs(touchDistance) / touchDuration; 
 
-        console.log(speed, touchDistance, touchDuration)
         if (speed < 0.3) return; // Adjust threshold if needed
         if (isScrolling) return
 
@@ -273,6 +275,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 item !== section && item.classList.remove('show-service-description')
                 item == section && item.classList.toggle('show-service-description')
             })
+        })
+    })
+
+    document.querySelectorAll('#galeryButton').forEach(button => {
+        button.addEventListener('click', () => {
+            window.open('galery', '_blank')
         })
     })
 
