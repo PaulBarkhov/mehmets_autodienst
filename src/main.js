@@ -284,6 +284,12 @@ document.addEventListener('DOMContentLoaded', () => {
         })
     })
 
+    document.querySelectorAll('#impressumButton').forEach(button => {
+        button.addEventListener('click', () => {
+            window.open('impressum', '_blank')
+        })
+    })
+
     navButtons.forEach(item => item.addEventListener('click', () => {
         let sectionIndex
         sections.forEach((section, index) => {
